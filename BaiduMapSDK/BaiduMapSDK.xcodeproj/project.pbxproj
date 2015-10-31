@@ -29,8 +29,12 @@
 		140B95E11BE4AE7300E1893F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140B95E01BE4AE7300E1893F /* CoreTelephony.framework */; };
 		140B95E31BE4AE7B00E1893F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 140B95E21BE4AE7B00E1893F /* libstdc++.6.0.9.tbd */; };
 		140B96341BE4B7FE00E1893F /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 140B96331BE4B7FE00E1893F /* mapapi.bundle */; };
-		140B96391BE4B81A00E1893F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B96381BE4B81A00E1893F /* RootViewController.m */; };
+		140B96391BE4B81A00E1893F /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 140B96381BE4B81A00E1893F /* RootViewController.mm */; };
 		140B963B1BE4C4D900E1893F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B963A1BE4C4D900E1893F /* main.m */; };
+		140B96451BE4D69200E1893F /* BMKClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B963E1BE4D69200E1893F /* BMKClusterAlgorithm.m */; };
+		140B96461BE4D69200E1893F /* BMKClusterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B96401BE4D69200E1893F /* BMKClusterItem.m */; };
+		140B96471BE4D69200E1893F /* BMKClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B96421BE4D69200E1893F /* BMKClusterManager.m */; };
+		140B96481BE4D69200E1893F /* BMKClusterQuadtree.m in Sources */ = {isa = PBXBuildFile; fileRef = 140B96441BE4D69200E1893F /* BMKClusterQuadtree.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +86,16 @@
 		140B96301BE4B41400E1893F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		140B96331BE4B7FE00E1893F /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		140B96371BE4B81A00E1893F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		140B96381BE4B81A00E1893F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		140B96381BE4B81A00E1893F /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
 		140B963A1BE4C4D900E1893F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		140B963D1BE4D69200E1893F /* BMKClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterAlgorithm.h; sourceTree = "<group>"; };
+		140B963E1BE4D69200E1893F /* BMKClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterAlgorithm.m; sourceTree = "<group>"; };
+		140B963F1BE4D69200E1893F /* BMKClusterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterItem.h; sourceTree = "<group>"; };
+		140B96401BE4D69200E1893F /* BMKClusterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterItem.m; sourceTree = "<group>"; };
+		140B96411BE4D69200E1893F /* BMKClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterManager.h; sourceTree = "<group>"; };
+		140B96421BE4D69200E1893F /* BMKClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterManager.m; sourceTree = "<group>"; };
+		140B96431BE4D69200E1893F /* BMKClusterQuadtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKClusterQuadtree.h; sourceTree = "<group>"; };
+		140B96441BE4D69200E1893F /* BMKClusterQuadtree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMKClusterQuadtree.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,7 @@
 		140B95BC1BE4AD0D00E1893F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				140B963C1BE4D69200E1893F /* Cluster */,
 				140B96331BE4B7FE00E1893F /* mapapi.bundle */,
 				140B95E21BE4AE7B00E1893F /* libstdc++.6.0.9.tbd */,
 				140B95E01BE4AE7300E1893F /* CoreTelephony.framework */,
@@ -234,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				140B96371BE4B81A00E1893F /* RootViewController.h */,
-				140B96381BE4B81A00E1893F /* RootViewController.m */,
+				140B96381BE4B81A00E1893F /* RootViewController.mm */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +257,21 @@
 			children = (
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		140B963C1BE4D69200E1893F /* Cluster */ = {
+			isa = PBXGroup;
+			children = (
+				140B963D1BE4D69200E1893F /* BMKClusterAlgorithm.h */,
+				140B963E1BE4D69200E1893F /* BMKClusterAlgorithm.m */,
+				140B963F1BE4D69200E1893F /* BMKClusterItem.h */,
+				140B96401BE4D69200E1893F /* BMKClusterItem.m */,
+				140B96411BE4D69200E1893F /* BMKClusterManager.h */,
+				140B96421BE4D69200E1893F /* BMKClusterManager.m */,
+				140B96431BE4D69200E1893F /* BMKClusterQuadtree.h */,
+				140B96441BE4D69200E1893F /* BMKClusterQuadtree.m */,
+			);
+			path = Cluster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +409,11 @@
 			files = (
 				140B95C21BE4AD0D00E1893F /* AppDelegate.mm in Sources */,
 				140B963B1BE4C4D900E1893F /* main.m in Sources */,
-				140B96391BE4B81A00E1893F /* RootViewController.m in Sources */,
+				140B96481BE4D69200E1893F /* BMKClusterQuadtree.m in Sources */,
+				140B96391BE4B81A00E1893F /* RootViewController.mm in Sources */,
+				140B96461BE4D69200E1893F /* BMKClusterItem.m in Sources */,
+				140B96451BE4D69200E1893F /* BMKClusterAlgorithm.m in Sources */,
+				140B96471BE4D69200E1893F /* BMKClusterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
